@@ -1,0 +1,71 @@
+* {       /*Selectam toate etichetele*/
+box-sizing: border-box;   /*Pentru calculul continut + padding+border+margini*/
+font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: row;   /*Afisam elementele pe randuri - orizontala*/
+    flex-wrap: wrap;       
+}
+.coloana-stanga {
+    width: 30%;
+    background-color: aqua;
+    padding: 30px;  
+    border-right: 2px solid black;
+}
+.coloana-dreapta {
+    width: 70%;
+    padding: 30px;
+}
+.poza{
+    border-radius: 50%;
+    border: 2px solid rgb(255, 0, 238);
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px; /* toate marginile le putem pune ca si pading: 30px auto; */
+}
+
+h1{
+    color:rgb(4, 29, 3);
+    text-transform: uppercase;
+}
+h3{
+    border-bottom: 2px solid rgb(4, 29, 3); 
+}
+ul{
+    padding-left: 15px;
+}
+h4, p {   /*toate h4 si toate p se vor selecta*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.buton-mai-mult{
+    font-weight: bold;
+    display: inline-block; /*avem nevoie de display sa umblam la padding si margin*/
+    padding: 5px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.sectiune{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.element-ascuns{
+    display: none;
+}
+/* Responsiveness */
+@media screen and (max-width:769px){     /* se va uita in intervalul de 0 - 760 px pe dispozitive care sunt mai mici gen telefon*/
+    .coloana-stanga{
+        width: 100%;
+        border-right: none;  
+        border-bottom: 2px solid rgb(4, 29, 3);
+    }
+    .coloana-dreapta{
+        width: 100%;
+    }
+
+}
